@@ -1,0 +1,42 @@
+public class MaxMinEqualChecker {
+    public static int isMaxMinEqual(int[] a) {
+        if (a.length < 2) {
+            return 0; // At least two different elements are required
+        }
+
+        int min = a[0];
+        int max = a[0];
+        int minCount = 0;
+        int maxCount = 0;
+
+        for (int num : a) {
+            if (num < min) {
+                min = num;
+                minCount = 1;
+            } else if (num == min) {
+                minCount++;
+            }
+
+            if (num > max) {
+                max = num;
+                maxCount = 1;
+            } else if (num == max) {
+                maxCount++;
+            }
+        }
+
+        return (min != max && minCount == maxCount) ? 1 : 0;
+    }
+
+    public static void main(String[] args) {
+        int[] example1 = {11, 4, 9, 11, 8, 5, 4, 10};
+        int[] example2 = {1, 1, 1, 1, 1, 1, 1, 1};
+        int[] example3 = {2, 2, 2, 2, 2};
+        int[] example4 = {3, 7, 3, 7, 3, 7, 3};
+
+        System.out.println(isMaxMinEqual(example1)); // Output: 1 (maxmin equal)
+        System.out.println(isMaxMinEqual(example2)); // Output: 0 (not maxmin equal)
+        System.out.println(isMaxMinEqual(example3)); // Output: 0 (not maxmin equal)
+        System.out.println(isMaxMinEqual(example4)); // Output: 1 (maxmin equal)
+    }
+}
