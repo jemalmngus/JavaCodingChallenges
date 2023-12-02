@@ -8,8 +8,7 @@ Explore this repository to find a diverse set of coding challenges covering topi
 
 ## Getting Started
 
-1. Clone this repository:
+ Clone this repository:
 
    ```bash
    git clone https://github.com/your-username/java-coding-challenges.git
-```
