@@ -17,7 +17,9 @@ public class NiceArray {
         int[] niceArray1 = {2, 10, 9, 3};
         int[] niceArray2 = {2, 2, 3, 3, 3};
         int[] notNiceArray = {3, 4, 5, 7};
-
+        Integer a=new Integer(3);
+        Integer b=new Integer(3);
+       System.out.println(a==b);
         int result1 = isNice(niceArray1);
         int result2 = isNice(niceArray2);
         int result3 = isNice(notNiceArray);
